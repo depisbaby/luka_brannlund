@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <head>
         <script>
 
@@ -13,16 +13,8 @@
                     template.innerHTML = data;
                     head.appendChild(template.content);
                 })
-                
                 .catch(err => console.error('Error loading head content:', err));
             
-            
-        </script>
-    </head>
-
-    <body>
-
-        <script>
             fetch('header.html')
                 .then(response => response.text())
                 .then(data => {
@@ -51,17 +43,22 @@
 
         </script>
 
+    </head>
+
+    <body>
+
+
         <div id="header"></div>
 
         <main>
             <div>
-                <h1>Home</h1>
+                <h1>Content</h1>
             </div>
         </main>
 
         <div id="footer"></div>
 
         
-
     </body>
+
 </html>

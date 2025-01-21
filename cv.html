@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script>
+
+    <head>
+        <script>
+
+            
+            fetch('head.html')
+                .then(response => response.text())
+                .then(data => {
+                    const head = document.head;
+                    const template = document.createElement('template');
+                    template.innerHTML = data;
+                    head.appendChild(template.content);
+                })
+                .catch(err => console.error('Error loading head content:', err));
+            
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data
+                    loadScript('header.js');
+                });
+                
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer').innerHTML = data);
+
+            function loadScript(url) 
+            {
+                const script = document.createElement('script');
+                script.src = url;  // The path to your external JS file
+                script.type = 'text/javascript';
+                script.onload = () => {
+                    console.log(`${url} script loaded successfully!`);
+                };
+                script.onerror = () => {
+                    console.error(`Failed to load ${url}`);
+                };
+                document.body.appendChild(script);  // Append the script to the document body
+                
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+
+        <div id="header"></div>
+
+        <main>
+            <div>
+                <h1>Cv</h1>
+            </div>
+        </main>
+
+        <div id="footer"></div>
 
         
-        fetch('_head.html')
-            .then(response => response.text())
-            .then(data => {
-                const head = document.head;
-                const template = document.createElement('template');
-                template.innerHTML = data;
-                head.appendChild(template.content);
-            })
-            .catch(err => console.error('Error loading head content:', err));
-        
-        
-        
-    </script>
-</head>
-<body>
+    </body>
 
-    <div id="header"></div>
-
-    <main>
-        <div>
-            <h1>Cv</h1>
-        </div>
-    </main>
-
-    <div id="footer"></div>
-
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
-
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
-    
-<body
 </html>
