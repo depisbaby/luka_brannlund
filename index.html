@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="styles.css">
+    <script>
+
+        
+        fetch('_head.html')
+            .then(response => response.text())
+            .then(data => {
+                const head = document.head;
+                const template = document.createElement('template');
+                template.innerHTML = data;
+                head.appendChild(template.content);
+            })
+            
+            .catch(err => console.error('Error loading head content:', err));
+        
+        
+    </script>
 </head>
 <body>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data
+                loadScript('header.js');
+            });
+            
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+        function loadScript(url) 
+        {
+            const script = document.createElement('script');
+            script.src = url;  // The path to your external JS file
+            script.type = 'text/javascript';
+            script.onload = () => {
+                console.log(`${url} script loaded successfully!`);
+            };
+            script.onerror = () => {
+                console.error(`Failed to load ${url}`);
+            };
+            document.body.appendChild(script);  // Append the script to the document body
+            
+        }
+
+    </script>
 
     <div id="header"></div>
 
     <main>
         <div>
-            <h1>index</h1>
+            <h1>Home</h1>
         </div>
     </main>
 
     <div id="footer"></div>
 
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
-
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
     
 
 <body

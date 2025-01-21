@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <script>
+
+        
+        fetch('_head.html')
+            .then(response => response.text())
+            .then(data => {
+                const head = document.head;
+                const template = document.createElement('template');
+                template.innerHTML = data;
+                head.appendChild(template.content);
+            })
+            .catch(err => console.error('Error loading head content:', err));
+        
+        
+        
+    </script>
 </head>
 <body>
 
@@ -11,7 +24,7 @@
 
     <main>
         <div>
-            <h1>cv</h1>
+            <h1>Cv</h1>
         </div>
     </main>
 
