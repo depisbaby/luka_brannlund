@@ -69,15 +69,15 @@
     
     .text-container {
         max-width: 500px;
-        background: rgba(255, 255, 255, 0.349); /* Light background for readability */
+        background: rgba(255, 255, 255, 0.349);
         line-height: 1.5;
-        align-self: center;
-        align-items: center;
-        justify-content: center;
         padding: 20px;
-        margin: 0px;
+        margin: 0;
         border-radius: 10px;
-       
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .navigation-button{
@@ -101,6 +101,22 @@
     .footer{
         padding-top: 0px;
         padding-bottom: 200px;
+    }
+
+    .rounded-button {
+        background-color: #75b977;
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-family: "Comfortaa", sans-serif;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .rounded-button:hover {
+        background-color: #527a53;
     }
 }
 
@@ -174,15 +190,15 @@
     
     .text-container {
         max-width: 500px;
-        background: rgba(255, 255, 255, 0.349); /* Light background for readability */
+        background: rgba(255, 255, 255, 0.349);
         line-height: 1.5;
-        align-self: center;
-        align-items: center;
-        justify-content: center;
         padding: 20px;
-        margin: 0px;
+        margin: 0;
         border-radius: 10px;
-       
+
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the button and other items horizontally */
     }
     
     .navigation-button{
@@ -206,6 +222,22 @@
     .footer{
         padding-top: 0px;
         padding-bottom: 40px;
+    }
+
+    .rounded-button {
+    background-color: #75b977;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: "Comfortaa", sans-serif;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .rounded-button:hover {
+        background-color: #527a53;
     }
 }
 
@@ -279,15 +311,15 @@
     
     .text-container {
         max-width: 500px;
-        background: rgba(255, 255, 255, 0.349); /* Light background for readability */
+        background: rgba(255, 255, 255, 0.349);
         line-height: 1.5;
-        align-self: center;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        margin: 0px;
+        padding: 20px;
+        margin: 0;
         border-radius: 10px;
-       
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .navigation-button{
@@ -310,6 +342,22 @@
 
     .footer{
         padding-bottom: 100px;
+    }
+
+    .rounded-button {
+    background-color: #75b977;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: "Comfortaa", sans-serif;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .rounded-button:hover {
+        background-color: #527a53;
     }
     
 }
@@ -384,15 +432,15 @@
     
     .text-container {
         max-width: 500px;
-        background: rgba(255, 255, 255, 0.349); /* Light background for readability */
+        background: rgba(255, 255, 255, 0.349);
         line-height: 1.5;
-        align-self: center;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        margin: 0px;
+        padding: 20px;
+        margin: 0;
         border-radius: 10px;
-       
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .navigation-button{
@@ -417,7 +465,24 @@
         padding-top: 0px;
         padding-bottom: 50px;
     }
+
+    .rounded-button {
+        background-color: #75b977;
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-family: "Comfortaa", sans-serif;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .rounded-button:hover {
+        background-color: #527a53;
+    }
     
 }
+
 
 
